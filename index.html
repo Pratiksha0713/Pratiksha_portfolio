@@ -110,6 +110,34 @@
   transform: scale(1.1);
 }
 
+/* Icon initial style */
+.contact-info .icon {
+  background: #2a2a2a;   /* Dark gray background */
+  color: #00e1ff;         /* Blue icon color */
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  font-size: 30px;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hover effect: border glow only */
+.contact-info .icon:hover {
+  box-shadow: 0 0 15px #00e1ff, 0 0 5px #00e1ff;
+  background: #2a2a2a; /* Background remains same */
+  color: #00e1ff;       /* Icon color remains same */
+  transform: scale(1.1);
+}
+
+
+.profile-photo:hover {
+  box-shadow: 0 0 20px 6px rgba(0, 207, 255, 0.4); /* Light blue shadow on hover */
+  transform: translateY(-8px); /* Lift up slightly */
+}
+
 
 </style>
 
@@ -144,11 +172,29 @@
 		  <div class="row d-flex align-items-center" style="min-height: 90vh;">
 			<!-- Left Side Text -->
 			<div class="col-md-6 d-flex flex-column justify-content-center">
-			  <div class="text">
-				<span class="subheading" style="color: #00e1ff;">HELLO!</span>
-				<h1 class="mb-4 mt-3" style="font-weight: bold;">I'm <span style="color: #00e1ff;">Pratiksha Jagdhane</span></h1>
-				<h2 class="mb-4" style="font-size: 20px;">Data Enthusiast</h2>
-			  </div>
+				<div class="text">
+					<span class="subheading" style="color: #00e1ff; font-size: 40px;">HELLO!</span>
+					<h1 class="mb-4 mt-3 typewriter-title">
+					  I'm <span style="color: #00e1ff;" id="typed-name"></span>
+					</h1>
+					<h2 class="mb-4 typewriter-subtitle" style="font-size: 40px;">
+					  <span id="typed-role"></span>
+					</h2>
+					<h5 class="mb-4" style="font-size: 20px;">New York, United States</h5>
+				  
+					<div style="margin-top: 20px; display: flex; gap: 20px; align-items: center;">
+					  <a href="tel:+17163399431" target="_blank" style="color: white; text-decoration: none;">
+						<img src="https://img.icons8.com/ios-filled/30/00CFFF/phone.png" alt="Phone" style="vertical-align: middle;"/>
+					  </a>
+					  <a href="mailto:pratikshaj137@gmail.com" target="_blank" style="color: white; text-decoration: none;">
+						<img src="https://img.icons8.com/ios-filled/30/00CFFF/new-post.png" alt="Email" style="vertical-align: middle;"/>
+					  </a>
+					  <a href="https://www.linkedin.com/in/pratiksha-jagdhane" target="_blank" style="color: white; text-decoration: none;">
+						<img src="https://img.icons8.com/ios-filled/30/00CFFF/linkedin.png" alt="LinkedIn" style="vertical-align: middle;"/>
+					  </a>
+					</div>
+				  </div>
+				  
 			</div>
 	  
 			<!-- Right Side Image and Details -->
@@ -156,14 +202,19 @@
 			  <div class="img-about">
 				<div class="img-about" style="margin-top: 60px;"> <!-- ✅ added margin-top -->
 
-				<img src="images/mypic1.png" class="img-fluid rounded b-shadow-a" alt="Profile Image" style="max-width: 300px;">
+				<!--
+					<img src="images/mypic1.png" class="img-fluid rounded b-shadow-a" alt="Profile Image" style="max-width: 300px;"> -->
+					<div class="profile-photo" style="width: 330px; height: 410px; overflow: hidden; border-radius: 20px; transition: all 0.3s ease;">
+						<img src="images/mypic1.png" alt="Pratiksha Jagdhane" style="width: 100%; height: 100%; object-fit: cover; transition: all 0.3s ease;">
+					  </div>
+					  
 			  </div>
 			  <div class="about-info mt-4 text-center">
 				<!-- <p><span class="title-s">Name:</span> <span>Pratiksha Jagdhane</span></p>
 				<p><span class="title-s">Job Role:</span> <span>Associate Software Engineer</span></p>
-				<p><span class="title-s">Experience:</span> <span>2 Years</span></p> -->
-				<p><span class="title-s">E:mail:</span> <span>pratikshaj137@gmail.com</span></p>
-				<p><span class="title-s">Address:</span> <span>Buffalo, New York</span></p>
+				<p><span class="title-s">Experience:</span> <span>2 Years</span></p> 
+				<p><span class="title-s">Email:</span> <span>pratikshaj137@gmail.com</span></p>
+				<p><span class="title-s">Address:</span> <span>Buffalo, New York</span></p> -->
 			  </div>
 			</div>
 		  </div>
@@ -180,11 +231,14 @@
 				<h1 class="big-4">About Me</h1>
 				<div class="underline"></div>
 
-			  <p>I am currently pursuing a Master’s degree in Data Science and Applications at the University at Buffalo and have previously worked as an 
-			  Associate Software Engineer at Tech Mahindra Ltd. My academic pursuits are deeply rooted in statistical data mining and machine learning, 
-			  disciplines that I have applied practically to enhance business operations and client services in my previous role. Skilled in Python, R,
-			  and SQL, I develop analytical solutions that significantly improve decision-making processes. I am dedicated to continual learning and
-			  leveraging my data science expertise to solve real-world challenges effectively.</p>
+			  <p>I am a passionate Data Science professional currently pursuing a Master’s degree in Data Science at the University at Buffalo,
+				 with a background in Computer Engineering. I bring over three years of experience applying data science, data engineering,
+				  and analytics solutions to drive business insights and operational efficiency.
+				   Skilled in Python, SQL, R, and cloud technologies like AWS and GCP, I have built scalable ETL pipelines, 
+				   deployed predictive models, and developed interactive dashboards for financial, healthcare, and customer analytics. 
+				   My previous role at Tech Mahindra strengthened my foundation in large-scale data systems and business intelligence. 
+				   With expertise in machine learning, statistical analysis, and data visualization, I am committed to leveraging data-driven 
+				   strategies to solve real-world challenges, enhance decision-making, and create measurable impact.</p>
 			</div>
 		  </div>
 		</div>
@@ -193,10 +247,26 @@
 
 
 	  <style>
+
+		/*Project images  */
+
+		.block-20 {
+  width: 100%;
+  height: 250px; /* or 300px if you want bigger */
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+.blog-entry {
+  margin: 15px;
+}
+
+
 		.skill-card {
 		  background: #2a2a2a;
 		  border-radius: 10px;
-		  padding: 20px;
+		  padding: 40px;
 		  box-shadow: 0px 0px 10px #111;
 		  transition: transform 0.3s ease, box-shadow 0.3s ease;
 		}
@@ -235,11 +305,22 @@
   		margin: 10px auto 0;
   		border-radius: 2px;
 		}
-
-		
-
-		  
+  
 		}
+
+		/* Resume Cards (Experience + Education) - NEW */
+	.resume-wrap {
+  	background: #2a2a2a;
+ 	 border-radius: 10px;
+  	padding: 20px;
+  	box-shadow: 0px 0px 10px #111;
+  	transition: transform 0.3s ease, box-shadow 0.3s ease;
+		}
+
+	.resume-wrap:hover {
+  	transform: translateY(-10px) scale(1.03);
+  	box-shadow: 0 8px 20px rgba(0, 225, 255, 0.5);
+	}
 	  </style>
 	  
 	  <section class="ftco-section" id="skills-section">
@@ -429,29 +510,33 @@
 		  <br>
 	  
 		  <div class="row">
-			<!-- Bachelor's Degree -->
-			<div class="col-md-6">
-			  <div class="resume-wrap ftco-animate">
-				<span class="date">2015–2019</span>
-				<h2>Bachelor of Engineering</h2>
-				<span class="position">Vidya Pratishthan’s Kamalnayan Bajaj Institute of Engineering and Technology</span>
-				<p class="mt-4">
-				  Relevant Coursework: Statistical Data Mining, Database Management Systems, Machine Learning, Data Intensive Computing, Probability and Statistics.
-				</p>
-			  </div>
-			</div>
-	  
+
 			<!-- Master's Degree -->
 			<div class="col-md-6">
 			  <div class="resume-wrap ftco-animate">
 				<span class="date">2023–2024</span>
-				<h2>Master of Professional Studies in Data Science and Applications</h2>
+				<h2>Master of Science</h2>
+				<h6>Data Science</h6>
 				<span class="position">University at Buffalo</span>
 				<p class="mt-4">
 				  Relevant Coursework: Data Analytics, Data Mining and Warehousing, Artificial Intelligence and Robotics, Data Structures and Algorithms.
 				</p>
 			  </div>
 			</div>
+			<!-- Bachelor's Degree -->
+			<div class="col-md-6">
+			  <div class="resume-wrap ftco-animate">
+				<span class="date">2015–2019</span>
+				<h2>Bachelor of Engineering</h2>
+				<h6>Computer Engineering</h6>
+				<span class="position">Savitribai Phule Pune University</span>
+				<p class="mt-4">
+				  Relevant Coursework: Statistical Data Mining, Database Management Systems, Machine Learning, Data Intensive Computing, Probability and Statistics.
+				</p>
+			  </div>
+			</div>
+	  
+			
 		  </div>
 	  
 		  <!-- Download CV Button 
@@ -534,14 +619,15 @@
       <div class="container">
       	<div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big-4">Contact Me !</h1>
+            <h1 class="big-4">Contact Me </h1>
 			  <div class="underline"></div>
            <!-- <p>Below are the details to reach out to me!</p>--> 
           </div>
         </div>
 
         <div class="row d-flex contact-info mb-5">
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+			<!--
+			<div class="col-md-6 col-lg-3 d-flex ftco-animate">
           	<div class="align-self-stretch box p-4 text-center">
           		<div class="icon d-flex align-items-center justify-content-center">
           			<span class="icon-map-signs"></span>
@@ -550,13 +636,16 @@
 	            <p>Buffalo, United States</p>
 	          </div>
           </div>
+			-->
+          
+
           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
           	<div class="align-self-stretch box p-4 text-center">
           		<div class="icon d-flex align-items-center justify-content-center">
           			<span class="icon-phone2"></span>
           		</div>
           		<h3 class="mb-4">Contact Number</h3>
-	            <p><a href="tel://0101010101">+ 1 716 3399 431</a></p>
+	            <p><a href="tel://+ 1 716 3399 431">+ 1 716 3399 431</a></p>
 	          </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
@@ -569,17 +658,17 @@
 	          </div>
           </div>
 		  <!--   Downl;oad resume -->
-			<!--
+			
           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
           	<div class="align-self-stretch box p-4 text-center">
           		<div class="icon d-flex align-items-center justify-content-center">
           			<span class="icon-globe"></span>
           		</div>
           		<h3 class="mb-4">Download Resume</h3>
-	            <p><a href="#">resumelink</a></p>
+	            <p><a href="https://drive.google.com/file/d/1_u3hJj4VOXCi-UnuIQpp8IbDDi73gqJ7/view?usp=drive_link">resumelink</a></p>
 	          </div>
           </div>
-		-->
+		
 
 		  <div class="col-md-6 col-lg-3 d-flex ftco-animate">
 			<div class="align-self-stretch box p-4 text-center">
@@ -640,6 +729,27 @@
 	});
   </script>
   
+  <script>
+	document.addEventListener('DOMContentLoaded', function() {
+	  function typeWriter(element, text, speed, callback) {
+		let i = 0;
+		function typing() {
+		  if (i < text.length) {
+			element.innerHTML += text.charAt(i);
+			i++;
+			setTimeout(typing, speed);
+		  } else if (callback) {
+			callback();
+		  }
+		}
+		typing();
+	  }
+  
+	  typeWriter(document.getElementById('typed-name'), 'Pratiksha Jagdhane', 100, function() {
+		typeWriter(document.getElementById('typed-role'), 'Data Enthusiast', 100);
+	  });
+	});
+  </script>
   
   </body>
 
